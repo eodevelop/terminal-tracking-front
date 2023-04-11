@@ -1,0 +1,67 @@
+.Title {
+    height: 155px;
+    width: 400px;
+    top: 0;
+    left: 0;
+    float: left;
+    position: fixed;
+    background: #EDECE9;
+    z-index: 2;
+
+    .Img {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .Vessel {
+        display: flex;
+        margin-top: 20px;
+        padding-left: 20px;
+
+        .Search-Vessel {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .Search-Text {
+            margin-left: 20px;
+            box-shadow: 0 4px 14px -3px rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            padding: 8px;
+            padding-left: 13px;
+            font-size: 13px;
+            width: 210px;
+            border: 1px solid transparent;
+        }
+
+        .Search-Button {
+            margin-left: 10px;
+            border: 2px solid #03a9f4;
+            box-shadow: 0 4px 14px -3px rgba(0, 0, 0, .2);
+            width: 70px;
+            border-radius: 7px;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #03a9f4;
+        }
+
+        .Search-Button:hover {
+            background: #03a9f4;
+            color: white;
+        }
+    }
+
+    .Port {
+        display: flex;
+        margin-top: 20px;
+        padding-left: 20px;
+
+        .Select-Port {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}

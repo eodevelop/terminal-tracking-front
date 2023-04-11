@@ -1,0 +1,75 @@
+.VesselInfo {
+    width: 100%;
+
+    .Card {
+        border-radius: 6px;
+        border: 1px solid #EDECE9;
+        transition: all .2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        /* padding: 70px 0 70px 0; */
+        margin: 0px 7px 3px 7px;
+        z-index: 1;
+
+        &:hover {
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1);
+        }
+
+        .Vessel-Info {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            padding-left: 20px;
+
+            .Vessel-Name {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .Terminal-Info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 10px;
+
+            ul {
+                text-align: center;
+                width: 33%;
+            }
+
+            li:first-child {
+                font-size: 11px;
+                color: #999;
+            }
+
+            li:last-child {
+                margin-top: 5px;
+
+            }
+        }
+
+        .Vessel-State {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            ul {
+                text-align: center;
+                width: 33%;
+            }
+
+            li:first-child {
+                font-size: 11px;
+                color: #999;
+            }
+
+            li:last-child {
+                margin-top: 5px;
+
+            }
+        }
+    }
+}

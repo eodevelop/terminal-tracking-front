@@ -1,0 +1,126 @@
+.SelectBox {
+  position: relative;
+  display: block;
+  width: 290px;
+  margin-top: -7px;
+  margin-left: 20px;
+  font-size: 13px;
+  color: #60666d;
+
+  .Current {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 14px -3px rgba(0, 0, 0, .2);
+
+    &:focus .Icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &:focus .Input-Text {
+      border-radius: 6px 6px 0 0;
+    }
+
+    .Icon {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 20px;
+      opacity: 0.3;
+      transition: 0.2s ease;
+    }
+  
+    .Value {
+      display: flex;
+    }
+  
+    .Input {
+      display: none;
+    }
+  
+    .Input:checked+.Input-Text {
+      display: block;
+    }
+  
+    .Input-Text {
+      display: none;
+      width: 100%;
+      margin: 0;
+      padding-left: 13px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    &:focus+.List {
+      opacity: 1;
+      -webkit-animation-name: none;
+      animation-name: none;
+    }
+  
+    &:focus+.List .Box_Option {
+      cursor: pointer;
+    }
+  }
+
+  .List {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    -webkit-animation-name: HideList;
+    animation-name: HideList;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: step-start;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+
+    &:li:last-child label {
+      border-radius: 0 0 6px 6px;
+    }
+
+    .Box_Option {
+      display: block;
+      padding-left: 13px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      background-color: #fff;
+    }
+
+    .Box_Option:hover,
+    .Box_Option:focus {
+      color: white;
+      background-color: #03a9f4;
+    }
+  }
+
+ 
+
+  @-webkit-keyframes HideList {
+    from {
+      transform: scaleY(1);
+    }
+
+    to {
+      transform: scaleY(0);
+    }
+  }
+
+  @keyframes HideList {
+    from {
+      transform: scaleY(1);
+    }
+
+    to {
+      transform: scaleY(0);
+    }
+  }
+}
